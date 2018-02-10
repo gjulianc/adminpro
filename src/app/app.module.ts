@@ -4,14 +4,23 @@ import { NgModule } from '@angular/core';
 // Rutas
 import { APP_ROUTES } from './app.routes';
 
-// Modulo
+// Modulos
 import { PagesModule } from './pages/pages.module';
 
+// temporal
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+// Servicios
+import { ServiceModule } from './services/service.module';
+
+
+
+
+// Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
-import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -22,14 +31,13 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    PagesModule,
     APP_ROUTES,
-    FormsModule
+    PagesModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ServiceModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
-
-
-
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
